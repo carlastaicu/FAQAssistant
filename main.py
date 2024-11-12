@@ -76,8 +76,3 @@ async def ask_question(user: str = Depends(get_current_active_user), request: Qu
     except HTTPException as e:
         error_message = f"An error occurred: {str(e)}"
         raise HTTPException(status_code=500, detail=error_message)
-    
-    
-##todo:
-# 2. Create an AI Router using LangChai
-# 3. Dockerfile - run the system using a docker image,
