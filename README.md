@@ -7,8 +7,8 @@ I started with creating a virtual environment to isolate dependencies and preven
 
 This API allows users to authenticate and ask questions using endpoints:
 
-POST /token - authenticate the user and get a JWT token
-POST /ask-question - ask question once the user is authenticated; answer given from the FAQ database or from OpenAI
+* POST /token - authenticate the user and get a JWT token
+* POST /ask-question - ask question once the user is authenticated; answer given from the FAQ database or from OpenAI
 
 ### Computing Embeddings
 To compute the embeddings, there is first the decision of what models to use for the given text. My initial choice was HuggingFace given the low cost (free) and the nature of the task, as the text consists of non-specialized notations. I also experimented with OpenAI embeddings using the model `text-embedding-3-large`, which can be used if uncommented. 
